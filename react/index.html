@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>ReactBot</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="script.js"></script>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</head>
+  </head>
+    <main>
+        <div class="jumbotron p-3 p-md-5 text-dark rounded bg-grey">
+            <h1 class="name">ReactBot</h1>
+        </div>
+    </main>
+
+    <div id="light">
+        <a class="boxclose" id="boxclose" onclick="lightbox_close();"></a>
+        <video id="PreviewedVideo" width="600" controls>
+            <source type="video/mp4">
+            <!--Browser does not support <video> tag -->
+          </video>
+      </div>
+      
+      <div id="fade" onClick="lightbox_close();"></div>
+    
+    <div class="container sections-wrapper">
+        <table class="table table-striped">
+            <thead>
+            <tr class="text-center">
+                <th scope="col">Name</th>
+                <th scope="col">Video Preview</th>
+                <th scope="col">Copy Link</th>
+
+            </tr>
+            </thead>
+            <tbody>
+            <tr class="text-center">
+                <td class="align-middle"><h3>alotofdamage</h3></td>
+                <td class="align-middle"><button class="btn btn-info" value="alotofdamage.mp4" onclick="lightbox_open(this);">Preview</button>
+                <td class="align-middle"><button type="button" class="btn-clipboard" title="Copy to Clipboard" onclick="copyToClipboard(this)" value="https://jlieter.github.io/react/alotofdamage.mp4"><i class="fas fa-copy" onclick="confirm(this)"></i></button></td>
+            </tr>
+            <tr class="text-center">
+                <td class="align-middle"><h3>bloodbornedunk</h3></td>
+                <td class="align-middle"><button class="btn btn-info" value="bloodbornedunk.mp4" onclick="lightbox_open(this);">Preview</button>
+                <td class="align-middle"><button type="button" class="btn-clipboard" title="Copy to Clipboard" onclick="copyToClipboard(this)" value="https://jlieter.github.io/react/bloodbornedunk.mp4"><i class="fas fa-copy" onclick="confirm(this)"></i></button></td>
+            </tr>
+            <tr class="text-center">
+                <td class="align-middle"><h3>doit</h3></td>
+                <td class="align-middle"><button class="btn btn-info" value="doit.mp4" onclick="lightbox_open(this);">Preview</button>
+                <td class="align-middle"><button type="button" class="btn-clipboard" title="Copy to Clipboard" onclick="copyToClipboard(this)" value="https://jlieter.github.io/react/doit.mp4"><i class="fas fa-copy" onclick="confirm(this)"></i></button></td>
+            </tr>
+            <tr class="text-center">
+                <td class="align-middle"><h3>fixit</h3></td>
+                <td class="align-middle"><button class="btn btn-info" value="fixit.mp4" onclick="lightbox_open(this);">Preview</button>
+                <td class="align-middle"><button type="button" class="btn-clipboard" title="Copy to Clipboard" onclick="copyToClipboard(this)" value="https://jlieter.github.io/react/fixit.mp4"><i class="fas fa-copy" onclick="confirm(this)"></i></button></td>
+            </tr>
+            <tr class="text-center">
+                <td class="align-middle"><h3>fuckingidiot</h3></td>
+                <td class="align-middle"><button class="btn btn-info" value="fuckingidiot.mp4" onclick="lightbox_open(this);">Preview</button>
+                <td class="align-middle"><button type="button" class="btn-clipboard" title="Copy to Clipboard" onclick="copyToClipboard(this)" value="https://jlieter.github.io/react/fuckingidiot.mp4"><i class="fas fa-copy" onclick="confirm(this)"></i></button></td>
+            </tr>
+            <tr class="text-center">
+                <td class="align-middle"><h3>gettothepoint</h3></td>
+                <td class="align-middle"><button class="btn btn-info" value="gettothepoint.mp4" onclick="lightbox_open(this);">Preview</button>
+                <td class="align-middle"><button type="button" class="btn-clipboard" title="Copy to Clipboard" onclick="copyToClipboard(this)" value="https://jlieter.github.io/react/gettothepoint.mp4"><i class="fas fa-copy" onclick="confirm(this)"></i></button></td>
+            </tr>
+            <tr class="text-center">
+                <td class="align-middle"><h3>hotcoffee</h3></td>
+                <td class="align-middle"><button class="btn btn-info" value="hotcoffee.mp4" onclick="lightbox_open(this);">Preview</button>
+                <td class="align-middle"><button type="button" class="btn-clipboard" title="Copy to Clipboard" onclick="copyToClipboard(this)" value="https://jlieter.github.io/react/hotcoffee.mp4"><i class="fas fa-copy" onclick="confirm(this)"></i></button></td>
+            </tr>
+            <tr class="text-center">
+                <td class="align-middle"><h3>idonthinkso</h3></td>
+                <td class="align-middle"><button class="btn btn-info" value="idonthinkso.mp4" onclick="lightbox_open(this);">Preview</button>
+                <td class="align-middle"><button type="button" class="btn-clipboard" title="Copy to Clipboard" onclick="copyToClipboard(this)" value="https://jlieter.github.io/react/idonthinkso.mp4"><i class="fas fa-copy" onclick="confirm(this)"></i></button></td>
+            </tr>
+            <tr class="text-center">
+                <td class="align-middle"><h3>makingmewatch</h3></td>
+                <td class="align-middle"><button class="btn btn-info" value="makingmewatch.mp4" onclick="lightbox_open(this);">Preview</button>
+                <td class="align-middle"><button type="button" class="btn-clipboard" title="Copy to Clipboard" onclick="copyToClipboard(this)" value="https://jlieter.github.io/react/makingmewatch.mp4"><i class="fas fa-copy" onclick="confirm(this)"></i></button></td>
+            </tr>
+            <tr class="text-center">
+                <td class="align-middle"><h3>notthatone</h3></td>
+                <td class="align-middle"><button class="btn btn-info" value="notthatone.mp4" onclick="lightbox_open(this);">Preview</button>
+                <td class="align-middle"><button type="button" class="btn-clipboard" title="Copy to Clipboard" onclick="copyToClipboard(this)" value="https://jlieter.github.io/react/notthatone.mp4"><i class="fas fa-copy" onclick="confirm(this)"></i></button></td>
+            </tr>
+            <tr class="text-center">
+                <td class="align-middle"><h3>omgicantwait</h3></td>
+                <td class="align-middle"><button class="btn btn-info" value="omgicantwait.mp4" onclick="lightbox_open(this);">Preview</button>
+                <td class="align-middle"><button type="button" class="btn-clipboard" title="Copy to Clipboard" onclick="copyToClipboard(this)" value="https://jlieter.github.io/react/omgicantwait.mp4"><i class="fas fa-copy" onclick="confirm(this)"></i></button></td>
+            </tr>
+            <tr class="text-center">
+                <td class="align-middle"><h3>seeya</h3></td>
+                <td class="align-middle"><button class="btn btn-info" value="seeya.mp4" onclick="lightbox_open(this);">Preview</button>
+                <td class="align-middle"><button type="button" class="btn-clipboard" title="Copy to Clipboard" onclick="copyToClipboard(this)" value="https://jlieter.github.io/react/seeya.mp4"><i class="fas fa-copy" onclick="confirm(this)"></i></button></td>
+            </tr>
+            <tr class="text-center">
+                <td class="align-middle"><h3>shining</h3></td>
+                <td class="align-middle"><button class="btn btn-info" value="shining.mp4" onclick="lightbox_open(this);">Preview</button>
+                <td class="align-middle"><button type="button" class="btn-clipboard" title="Copy to Clipboard" onclick="copyToClipboard(this)" value="https://jlieter.github.io/react/shining.mp4"><i class="fas fa-copy" onclick="confirm(this)"></i></button></td>
+            </tr>
+            <tr class="text-center">
+                <td class="align-middle"><h3>thatsstupid</h3></td>
+                <td class="align-middle"><button class="btn btn-info" value="thatsstupid.mp4" onclick="lightbox_open(this);">Preview</button>
+                <td class="align-middle"><button type="button" class="btn-clipboard" title="Copy to Clipboard" onclick="copyToClipboard(this)" value="https://jlieter.github.io/react/thatsstupid.mp4"><i class="fas fa-copy" onclick="confirm(this)"></i></button></td>
+            </tr>
+            <tr class="text-center">
+                <td class="align-middle"><h3>yeah</h3></td>
+                <td class="align-middle"><button class="btn btn-info" value="yeah.mp4" onclick="lightbox_open(this);">Preview</button>
+                <td class="align-middle"><button type="button" class="btn-clipboard" title="Copy to Clipboard" onclick="copyToClipboard(this)" value="https://jlieter.github.io/react/yeah.mp4"><i class="fas fa-copy" onclick="confirm(this)"></i></button></td>
+            </tr>
+            <tr class="text-center">
+                <td class="align-middle"><h3>youreallstupid</h3></td>
+                <td class="align-middle"><button class="btn btn-info" value="youreallstupid.mp4" onclick="lightbox_open(this);">Preview</button>
+                <td class="align-middle"><button type="button" class="btn-clipboard" title="Copy to Clipboard" onclick="copyToClipboard(this)" value="https://jlieter.github.io/react/youreallstupid.mp4"><i class="fas fa-copy" onclick="confirm(this)"></i></button></td>
+            </tr>
+            <tr class="text-center">
+                <td class="align-middle"><h3>yourpoorballs</h3></td>
+                <td class="align-middle"><button class="btn btn-info" value="yourpoorballs.mp4" onclick="lightbox_open(this);">Preview</button>
+                <td class="align-middle"><button type="button" class="btn-clipboard" title="Copy to Clipboard" onclick="copyToClipboard(this)" value="https://jlieter.github.io/react/yourpoorballs.mp4"><i class="fas fa-copy" onclick="confirm(this)"></i></button></td>
+            </tr>
+
+            </tbody>
+        </table>
+    </div>
+    
+
+</html>

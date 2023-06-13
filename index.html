@@ -6,16 +6,14 @@
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="script.js"></script>
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 </head>
 
-
-
-
 <header>
-		<div class="row">
+		<div id="Header">
 			<div class="col-xs col-md">
 				<nav class="navbar navbar-expand-md shadow fixed-top navbar-light">
 					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -24,14 +22,11 @@
 					
 					<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
 						<div class="navbar-nav">
-							<a class="nav-item nav-link about-link">About</a>
-							<a class="nav-item nav-link projects-link">Projects</a>
-							<a class="nav-item nav-link">Experience</a>
+							<a href="#ABOUT" class="nav-item nav-link about-link">About</a>
+							<a href="#PROJECTS" class="nav-item nav-link projects-link">Projects</a>
+							<a href="#EXPERIENCE" class="nav-item nav-link">Experience</a>
 						</div>
 					</div>
-					<!-- <a class="nav-item nav-link" href="images/resume.pdf" target="_blank" rel="nofollow noopener noreferrer">
-						Resume <i class="far fa-file"></i>
-					</a> -->
 				</nav>
 			</div>
 		</div>
@@ -54,7 +49,9 @@
         <div class="row">
             <div class="primary col-lg-8 col-12">
                 <div class="jumbotron p-3 p-md-5 text-dark rounded bg-grey">
-                    <h2 class="heading">About Me</h2>
+                    <h2 class="heading">
+                        <a name="ABOUT">About Me</a>
+                    </h2>
                     <div class="content">
                         <p>Software developer with interests in microservices, machine learning, and data, looking to transition to a more technology focused role. I have worked for three years in finance technologies and while this provided great experiences to bolster my software engineering skills, I am looking forward to the opportunity to work in a more technology focused company in order to learn about how the practices and workflow differ, and to work with products more interesting to me.</p>
                      
@@ -79,7 +76,9 @@
 		<div class="row">
             <div class="primary col-lg-8 col-12">
                 <div class="jumbotron p-3 p-md-5 text-dark rounded bg-grey">
-                    <h2 class="heading">Current Project</h2>
+                    <h2 class="heading">
+                        <a name="PROJECTS">Current Project</a>
+                    </h2>
                     <div class="content">
                         <div class="item featured text-center">
                             <h3 class="title">SnakeBot AI</h3>
@@ -137,7 +136,9 @@
 		<div class="row">
             <div class="primary col-lg-8 col-12">
                 <div class="jumbotron p-3 p-md-5 text-dark rounded bg-grey">
-                    <h2 class="heading">Experience</h2>
+                    <h2 class="heading">
+                        <a name="EXPERIENCE">Experience</a>
+                    </h2>
                     <div class="content">
                             <div class="item">
                             	<br>
