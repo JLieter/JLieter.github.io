@@ -1,7 +1,7 @@
 async function toggleDropdownDinner(element) {
     // Display Dropdown
     const dropdown = document.getElementById('dinner');
-    dropdown.style.display = 'block';
+    dropdown.style.display = (dropdown.style.display === 'none') ? 'block' : 'none';
     const otherdropdown = document.getElementById('drink');
     const dropdownSelection = document.getElementById('drinks')
     dropdownSelection.value = 'none'
@@ -9,7 +9,7 @@ async function toggleDropdownDinner(element) {
 
     // Display Header
     const header = document.getElementById('dinnerHeader');
-    header.style.display = 'block';
+    header.style.display = (header.style.display === 'none') ? 'block' : 'none';
     const otherheader = document.getElementById('drinkHeader');
     otherheader.style.display =  'none';
 
@@ -28,7 +28,7 @@ async function toggleDropdownDinner(element) {
 async function toggleDropdownDrinks(element) {
     // Display Dropdown
     const dropdown = document.getElementById('drink');
-    dropdown.style.display = 'block';
+    dropdown.style.display = (dropdown.style.display === 'none') ? 'block' : 'none';
     const otherdropdown = document.getElementById('dinner');
     const dropdownSelection = document.getElementById('dinners')
     dropdownSelection.value = 'none'
@@ -36,7 +36,7 @@ async function toggleDropdownDrinks(element) {
     
     // Display Header
     const header = document.getElementById('drinkHeader');
-    header.style.display = 'block';
+    header.style.display = (header.style.display === 'none') ? 'block' : 'none';
     const otherheader = document.getElementById('dinnerHeader');
     otherheader.style.display =  'none';    
 
