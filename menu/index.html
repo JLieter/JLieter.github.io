@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Jordan Lieter</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="script.js"></script>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</head>
+
+</head>
+<main>
+    <div class="jumbotron p-3 p-md-5 text-dark rounded bg-grey">
+        <h1 class="name">Menu</h1>
+        <h2 class="name">Dinner & Drinks</h2>
+        
+    </div>
+    <div class="container sections-wrapper">
+        <table class=table table-striped>
+            <td class="align-middle">
+                <button class="btn btn-danger" onclick="toggleDropdownDinner(this)">Dinner</button>
+                <button class="btn btn-info" onclick="toggleDropdownDrinks(this)">Drinks</button>
+            </td>
+
+            <td>
+                <div id="dinnerHeader" class="header">
+                    <h2>Dinners:</h2>
+                </div>
+                <div id="drinkHeader" class="header">
+                    <h2>Drinks:</h2>
+                </div>
+            </td>
+
+            <td class="align-middle">
+                <div id="dinner" class="dropdown">
+                    <select id="dinners">
+                        <option value="none">Select Option</option>
+                        <optgroup label="Bottom Roast (Beef Round)">
+                            <option value="stew">Stew</option>
+                        <optgroup label="Chicken">
+                            <option value="chicken&pasta">Chicken & Pasta</option>
+                            <option value="marinatedchicken">Marinated Chicken</option>
+                            <option value="stirfry">Stir Fry</option>
+                            <option value="chili">Chili</option>
+                        <optgroup label="Ground Beef">
+                            <option value="bolegnese">Bolegnese</option>
+                            <option value="burgers">Burgers</option>
+                            <option value="tacosalad">Taco Salad</option>
+                        <optgroup label="Pork Shoulder">
+                            <option value="pulledpork">Pulled Pork</option>
+                        <optgroup label="Sausage">
+                            <option value="sausage&peppers">Sausage & Peppers</option>
+                            <option value="jumbalaya">Jumbalaya</option>
+                        <optgroup label="misc.">
+                            <option value="cavatelli">Cavatelli</option>
+                            <option value="meatballs">Spaghetti & Meatballs</option>
+                    </select>
+                </div>
+                    
+                <div id="drink" class="dropdown">
+                    <select id="drinks">
+                        <option value="none">Select Option</option>
+                        <optgroup label="Tequila">
+                            <option value="passionfruitmargarita">Passion Fruit Margarita</option>
+                        <optgroup label="Whiskey">
+                            <option value="piss">Piss</option>
+                            <option value="whiskeysour">Whiskey Sour</option>
+                    </select>
+                </div>
+            </td>
+        </table>
+    </div>
+
+    <div class="container sections-wrapper">
+        <div id="description-container">
+
+            <!-- Default -->
+            <div id="description-none" class="description">
+                <p></p>
+            </div>
+
+            <!-- Dinners -->
+            <div id="description-stew" class="description">
+                <h2 class="text-center">Stew</h2>
+                <table class="table table-striped">
+                    <tr class="text-center">
+                        <td class="align-middle"><h5>Prep Time:</h5></td>
+                        <td class="align-middle">15 Minutes</td>
+                        <td class="align-middle"><h5>Total Time:</h5></td>
+                        <td class="align-middle">3 Hours</td>
+                    </tr>
+                    <tr class="text-center">
+                        <td class="align-middle"><h5>Oven Temp:</h5></td>
+                        <td class="align-middle">Pressure Cooker</td>
+                        <td class="align-middle"><h5>Servings:</h5></td>
+                        <td class="align-middle">6-8</td>
+                    </tr>
+                </table>
+                <h4 class="text-center">Ingredients:</h4>
+                <table class="table table-striped">
+                    <tr class="text-center">
+                        <td class="align-middle">3lbs Rump Roast</td>
+                        <td class="align-middle">6 Russet Potatoes</td>
+                        <td class="align-middle">6 Carrots</td>
+                        <td class="align-middle">6 Cubes Beef Boullion</td>
+                    </tr>
+                    <tr class="text-center">
+                        <td class="align-middle">4 cups Bisquick box mix</td>
+                        <td class="align-middle">1 1/3 cups milk</td>
+                    </tr>
+                </table>
+                <h4 class="text-center">Directions:</h4>
+                <ul class="list-group text-center">
+                    <li class="list-group-item">Start with Rump Roast in Pressure cooker.</li> 
+                    <li class="list-group-item">Fill with water until 3/4 meat is covered.</li>
+                    <li class="list-group-item">Add 6 cubes Beef Boullion or to taste. </li>
+                    <li class="list-group-item">Start Pressure cooker on high for one hour. </li>
+                    <li class="list-group-item">Peel and slice carrots, peel and cube potatoes. </li>
+                    <li class="list-group-item">After pressure cooker finishes, allow to slow release steam.</li>
+                    <li class="list-group-item">Add carrots and potatoes, and cook on high for 20 minutes. </li>
+                    <li class="list-group-item">Prepare dumplings by adding four cups Bisquick box mixing and 1 1/3 cups milk to a mixing bowl. Mix thoroughly. </li>
+                    <li class="list-group-item">When pressure cooker finishes, allow to slow release and remove meat.</li>
+                    <li class="list-group-item">Set roast to the side and cover. </li>
+                    <li class="list-group-item">Scoop the mixture by spoonful into the pot to create dumpling size and shape. </li>
+                    <li class="list-group-item">Cook on high for 10 more minutes. </li>
+                    <li class="list-group-item">Allow to cool. </li>
+                    <li class="list-group-item">Pull apart Rump Roast with a serving fork and serve into a bowl with stew covering the meat.</li>
+                </ul>
+            </div>
+
+            <div id="description-chicken&pasta" class="description">
+                <h2 class="text-center">Chicken and Pasta</h2>
+                <table class="table table-striped">
+                    <tr class="text-center">
+                        <td class="align-middle"><h5>Prep Time:</h5></td>
+                        <td class="align-middle">20 Minutes</td>
+                        <td class="align-middle"><h5>Total Time:</h5></td>
+                        <td class="align-middle">1 Hours</td>
+                    </tr>
+                    <tr class="text-center">
+                        <td class="align-middle"><h5>Oven Temp:</h5></td>
+                        <td class="align-middle">350</td>
+                        <td class="align-middle"><h5>Servings:</h5></td>
+                        <td class="align-middle">3-4</td>
+                    </tr>
+                </table>
+                <h4 class="text-center">Ingredients:</h4>
+                <table class="table table-striped">
+                    <tr class="text-center">
+                        <td class="align-middle">3lbs Chicken Breast</td>
+                        <td class="align-middle">1 Box Rotini</td>
+                        <td class="align-middle">1 Lg Ragu</td>
+                        <td class="align-middle">Olive Oil</td>
+                    </tr>
+                    <tr class="text-center">
+                        <td class="align-middle">1 bag cheese mix (optional)</td>
+                        <td class="align-middle">Broccoli (optional)</td>
+                        <td class="align-middle">2-3 Bell Pepper (optional)</td>
+                        <td class="align-middle">1-2 cloves Garlic (optional)</td>
+                    </tr>
+                </table>
+                <h4 class="text-center">Directions:</h4>
+                <ul class="list-group text-center">
+                    <li class="list-group-item">Start by trimming the fat off chicken breasts.</li> 
+                    <li class="list-group-item">Line a baking tray with foil and cooking spray.</li>
+                    <li class="list-group-item">Salt and Pepper chicken, place in the oven on tray for 30-35 minutes at 350.</li>
+                    <li class="list-group-item">Fill a 4qt pot 3/4 of the way with cold water.</li>
+                    <li class="list-group-item">Add 2 pinches salt and a splash of olive oil. Bring to boil.</li>
+                    <li class="list-group-item">Once boiling, add Rotini.</li>
+                    <li class="list-group-item">Prep optional vegetables by steaming broccoli, dicing peppers, or mincing garlic.</li>
+                    <li class="list-group-item">Strain Pasta once cooked and add to a larger Pan or Wok.</li>
+                    <li class="list-group-item">Add optional broccoli & peppers to Pan/Wok.</li>
+                    <li class="list-group-item">Once ready, dice cooked chicken and add to Pan/Wok.</li>
+                    <li class="list-group-item">Add Ragu to Pan/Wok.</li>
+                    <li class="list-group-item">Add optional Cheese to Wok. Season with italian seasoning and Garlic Powder to taste. Add optional Garlic.</li>
+                    <li class="list-group-item">Mix thoroughly. Serve.</li>
+                </ul>
+            </div>
+
+            <div id="description-marinatedchicken" class="description">
+                <h2 class="text-center">Marinated Chicken</h2>
+                <table class="table table-striped">
+                    <tr class="text-center">
+                        <td class="align-middle"><h5>Prep Time:</h5></td>
+                        <td class="align-middle"></td>
+                        <td class="align-middle"><h5>Total Time:</h5></td>
+                        <td class="align-middle"></td>
+                    </tr>
+                    <tr class="text-center">
+                        <td class="align-middle"><h5>Oven Temp:</h5></td>
+                        <td class="align-middle"></td>
+                        <td class="align-middle"><h5>Servings:</h5></td>
+                        <td class="align-middle"></td>
+                    </tr>
+                </table>
+                <h4 class="text-center">Ingredients:</h4>
+                <table class="table table-striped">
+                    <tr class="text-center">
+                        <td class="align-middle"></td>
+                        <td class="align-middle"></td>
+                        <td class="align-middle"></td>
+                        <td class="align-middle"></td>
+                    </tr>
+                    <tr class="text-center">
+                        <td class="align-middle"></td>
+                        <td class="align-middle"></td>
+                        <td class="align-middle"></td>
+                        <td class="align-middle"></td>
+                    </tr>
+                    <tr class="text-center">
+                        <td class="align-middle"></td>
+                        <td class="align-middle"></td>
+                        <td class="align-middle"></td>
+                        <td class="align-middle"></td>
+                    </tr>
+                </table>
+                <h4 class="text-center">Directions:</h4>
+                <ul class="list-group text-center">
+                <li class="list-group-item"></li> 
+                <li class="list-group-item"></li>
+                <li class="list-group-item"></li>
+                <li class="list-group-item"></li>
+                <li class="list-group-item"></li>
+                <li class="list-group-item"></li>
+                <li class="list-group-item"></li>
+                <li class="list-group-item"></li>
+                <li class="list-group-item"></li>
+                </ul>
+            </div>
+
+            <div id="description-stirfry" class="description">
+                <h2 class="text-center">Stir Fry</h2>
+                <table class="table table-striped">
+                    <tr class="text-center">
+                        <td class="align-middle"><h5>Prep Time:</h5></td>
+                        <td class="align-middle">20 Minutes</td>
+                        <td class="align-middle"><h5>Total Time:</h5></td>
+                        <td class="align-middle">1 Hours</td>
+                    </tr>
+                    <tr class="text-center">
+                        <td class="align-middle"><h5>Oven Temp:</h5></td>
+                        <td class="align-middle">350</td>
+                        <td class="align-middle"><h5>Servings:</h5></td>
+                        <td class="align-middle">3-4</td>
+                    </tr>
+                </table>
+                <h4 class="text-center">Ingredients:</h4>
+                <table class="table table-striped">
+                    <tr class="text-center">
+                        <td class="align-middle">3lbs Chicken Breast</td>
+                        <td class="align-middle">1 1/2 Cup Rice</td>
+                        <td class="align-middle">Green Beans</td>
+                        <td class="align-middle">Broccoli</td>
+                    </tr>
+                    <tr class="text-center">
+                        <td class="align-middle">2-3 Bell Peppers.</td>
+                        <td class="align-middle">Soy Sauce.</td>
+                        <td class="align-middle">Teriyaki Glaze.</td>
+                        <td class="align-middle">Honey.</td>
+                    </tr>
+                    <tr class="text-center">
+                        <td class="align-middle">3 Eggs (optional)</td>
+                    </tr>
+                </table>
+                <h4 class="text-center">Directions:</h4>
+                <ul class="list-group text-center">
+                    <li class="list-group-item">Start by trimming the fat off chicken breasts.</li> 
+                    <li class="list-group-item">Line a baking tray with foil and cooking spray.</li>
+                    <li class="list-group-item">Salt and Pepper chicken, place in the oven on tray for 30-35 minutes at 350.</li>
+                    <li class="list-group-item">Add rice to 2 1/2 cups water.</li>
+                    <li class="list-group-item">Cook Rice in pressure cooker on high for 4 minutes.</li>
+                    <li class="list-group-item">Prepare vegetables by dicing peppers and steaming broccoli and green beans.</li>
+                    <li class="list-group-item">Once ready, dice cooked chicken and add to a large Pan/Wok.</li>
+                    <li class="list-group-item">Add Rice and vegetables into Pan/Wok</li>
+                    <li class="list-group-item">Add 1 1/2 tbsp soy sauce.</li>
+                    <li class="list-group-item">Add 1/2 cup of teriyaki glaze.</li>
+                    <li class="list-group-item">Add 2 tsp Honey.</li>
+                    <li class="list-group-item">Carefully crack three eggs in.</li>
+                    <li class="list-group-item">Mix thoroughly on heat for several minutes to cook eggs.</li>
+                </ul>
+            </div>
+
+            <div id="description-chili" class="description">
+                <h2 class="text-center">Chili</h2>
+                <table class="table table-striped">
+                    <tr class="text-center">
+                        <td class="align-middle"><h5>Prep Time:</h5></td>
+                        <td class="align-middle">20 Minutes</td>
+                        <td class="align-middle"><h5>Total Time:</h5></td>
+                        <td class="align-middle">1 Hours</td>
+                    </tr>
+                    <tr class="text-center">
+                        <td class="align-middle"><h5>Oven Temp:</h5></td>
+                        <td class="align-middle">350</td>
+                        <td class="align-middle"><h5>Servings:</h5></td>
+                        <td class="align-middle">3-4</td>
+                    </tr>
+                </table>
+                <h4 class="text-center">Ingredients:</h4>
+                <table class="table table-striped">
+                    <tr class="text-center">
+                        <td class="align-middle">3lbs Chicken Breast</td>
+                        <td class="align-middle">1 Cup Ragu</td>
+                        <td class="align-middle">2 14.5oz cans Beans</td>
+                        <td class="align-middle">1 28o can Diced Tomato</td>
+                    </tr>
+                    <tr class="text-center">
+                        <td class="align-middle">1 tsp Salt</td>
+                        <td class="align-middle">1 tsp Pepper</td>
+                        <td class="align-middle">1 tsp Cumin</td>
+                        <td class="align-middle">1 tsp Garlic Powder</td>
+                    </tr>
+                    <tr class="text-center">
+                        <td class="align-middle">1 tsp Oregano</td>
+                        <td class="align-middle">2 tbsp Chili Powder</td>
+                        <td class="align-middle">1 1/2 Cup Rice (optional)</td>
+                        <td class="align-middle">1 Bag Cheese Mix (optional)</td>
+                    </tr>
+                </table>
+                <h4 class="text-center">Directions:</h4>
+                <ul class="list-group text-center">
+                    <li class="list-group-item">Start by trimming the fat off chicken breasts.</li> 
+                    <li class="list-group-item">Line a baking tray with foil and cooking spray.</li>
+                    <li class="list-group-item">Salt and Pepper chicken, place in the oven on tray for 30-35 minutes at 350.</li>
+                    <li class="list-group-item">Add optional rice to 2 1/2 cups water.</li>
+                    <li class="list-group-item">Cook Rice in pressure cooker on high for 4 minutes.</li>
+                    <li class="list-group-item">Prepare vegetables by dicing peppers and steaming broccoli and green beans.</li>
+                    <li class="list-group-item">Once ready, dice cooked chicken and add to a large Pan/Wok.</li>
+                    <li class="list-group-item">Add Rice, Beans, and Tomatoes into Pan/Wok</li>
+                    <li class="list-group-item">Mix thoroughly on heat for several minutes.</li>
+                </ul>
+            </div>
+            
+            <div id="description-bolegnese" class="description">
+                <h2 class="text-center">Pasta Bolegnese</h2>
+                <table class="table table-striped">
+                    <tr class="text-center">
+                        <td class="align-middle"><h5>Prep Time:</h5></td>
+                        <td class="align-middle">5-10 Minutes</td>
+                        <td class="align-middle"><h5>Total Time:</h5></td>
+                        <td class="align-middle">45 Minutes</td>
+                    </tr>
+                    <tr class="text-center">
+                        <td class="align-middle"><h5>Oven Temp:</h5></td>
+                        <td class="align-middle">Stove Top</td>
+                        <td class="align-middle"><h5>Servings:</h5></td>
+                        <td class="align-middle">3-4</td>
+                    </tr>
+                </table>
+                <h4 class="text-center">Ingredients:</h4>
+                <table class="table table-striped">
+                    <tr class="text-center">
+                        <td class="align-middle">3lb Ground Beef</td>
+                        <td class="align-middle">1 Box Rotini</td>
+                        <td class="align-middle">1 Lg Jar Ragu</td>
+                        <td class="align-middle">2 cloves Garlic</td>
+                    </tr>
+                    <tr class="text-center">
+                        <td class="align-middle">Italian Seasoning</td>
+                        <td class="align-middle">Garlic Powder</td>
+                        <td class="align-middle">Olive Oil</td>
+                        <td class="align-middle">2-3 Bell Peppers (optional)</td>
+                    </tr>
+                    <tr class="text-center">
+                        <td class="align-middle">Broccoli (optional)</td>
+                        <td class="align-middle">Bag of mixed cheese (optional)</td>
+                        <td class="align-middle"></td>
+                        <td class="align-middle"></td>
+                        <td class="align-middle"></td>
+                    </tr>
+                </table>
+                <h4 class="text-center">Directions:</h4>
+                <ul class="list-group text-center">
+                    <li class="list-group-item">Start by adding oil to Large Pan/Wok and heating.</li> 
+                    <li class="list-group-item">Add Ground beef to Pan and start mixing thoroughly while it cooks.</li>
+                    <li class="list-group-item">Fill a 4qt Sauce Pot 3/4 with water.</li>
+                    <li class="list-group-item">Add 1 tbsp Olive Oil & 2 tsp Salt to water.</li>
+                    <li class="list-group-item">Bring water to boil.</li>
+                    <li class="list-group-item">Steam optional Broccoli and Dice optional Bell peppers.</li>
+                    <li class="list-group-item">Once Meat is cooked, strain and place back in large pan.</li>
+                    <li class="list-group-item">Once Pasta is done, strain and place into large pan.</li>
+                    <li class="list-group-item">Add Lg. Jar Ragu.</li>
+                    <li class="list-group-item">Add Garlic cloves, optional cheese, optional Bell Peppers, and optional Broccoli and seasonins to taste.</li>
+                    <li class="list-group-item">Mix thoroughly over medium heat. Serve.</li>
+                </ul>
+            </div>
+
+            <div id="description-burgers" class="description">
+                <h2 class="text-center">Burgers</h2>
+                <table class="table table-striped">
+                    <tr class="text-center">
+                        <td class="align-middle"><h5>Prep Time:</h5></td>
+                        <td class="align-middle"></td>
+                        <td class="align-middle"><h5>Total Time:</h5></td>
+                        <td class="align-middle"></td>
+                    </tr>
+                    <tr class="text-center">
+                        <td class="align-middle"><h5>Oven Temp:</h5></td>
+                        <td class="align-middle"></td>
+                        <td class="align-middle"><h5>Servings:</h5></td>
+                        <td class="align-middle"></td>
+                    </tr>
+                </table>
+                <h4 class="text-center">Ingredients:</h4>
+                <table class="table table-striped">
+                    <tr class="text-center">
+                        <td class="align-middle"></td>
+                        <td class="align-middle"></td>
+                        <td class="align-middle"></td>
+                        <td class="align-middle"></td>
+                    </tr>
+                    <tr class="text-center">
+                        <td class="align-middle"></td>
+                        <td class="align-middle"></td>
+                        <td class="align-middle"></td>
+                        <td class="align-middle"></td>
+                    </tr>
+                    <tr class="text-center">
+                        <td class="align-middle"></td>
+                        <td class="align-middle"></td>
+                        <td class="align-middle"></td>
+                        <td class="align-middle"></td>
+                    </tr>
+                </table>
+                <h4 class="text-center">Directions:</h4>
+                <ul class="list-group text-center">
+                    <li class="list-group-item"></li> 
+                    <li class="list-group-item"></li>
+                    <li class="list-group-item"></li>
+                    <li class="list-group-item"></li>
+                    <li class="list-group-item"></li>
+                    <li class="list-group-item"></li>
+                    <li class="list-group-item"></li>
+                    <li class="list-group-item"></li>
+                    <li class="list-group-item"></li>
+                </ul>
+            </div>
+
+            <div id="description-tacosalad" class="description">
+                <h2 class="text-center">Taco Salad</h2>
+                <table class="table table-striped">
+                    <tr class="text-center">
+                        <td class="align-middle"><h5>Prep Time:</h5></td>
+                        <td class="align-middle"></td>
+                        <td class="align-middle"><h5>Total Time:</h5></td>
+                        <td class="align-middle"></td>
+                    </tr>
+                    <tr class="text-center">
+                        <td class="align-middle"><h5>Oven Temp:</h5></td>
+                        <td class="align-middle"></td>
+                        <td class="align-middle"><h5>Servings:</h5></td>
+                        <td class="align-middle"></td>
+                    </tr>
+                </table>
+                <h4 class="text-center">Ingredients:</h4>
+                <table class="table table-striped">
+                    <tr class="text-center">
+                        <td class="align-middle"></td>
+                        <td class="align-middle"></td>
+                        <td class="align-middle"></td>
+                        <td class="align-middle"></td>
+                    </tr>
+                    <tr class="text-center">
+                        <td class="align-middle"></td>
+                        <td class="align-middle"></td>
+                        <td class="align-middle"></td>
+                        <td class="align-middle"></td>
+                    </tr>
+                    <tr class="text-center">
+                        <td class="align-middle"></td>
+                        <td class="align-middle"></td>
+                        <td class="align-middle"></td>
+                        <td class="align-middle"></td>
+                    </tr>
+                </table>
+                <h4 class="text-center">Directions:</h4>
+                <ul class="list-group text-center">
+                    <li class="list-group-item"></li> 
+                    <li class="list-group-item"></li>
+                    <li class="list-group-item"></li>
+                    <li class="list-group-item"></li>
+                    <li class="list-group-item"></li>
+                    <li class="list-group-item"></li>
+                    <li class="list-group-item"></li>
+                    <li class="list-group-item"></li>
+                    <li class="list-group-item"></li>
+                </ul>
+            </div>
+
+            <div id="description-pulledpork" class="description">
+                <h2 class="text-center">Pulled Pork</h2>
+                <table class="table table-striped">
+                    <tr class="text-center">
+                        <td class="align-middle"><h5>Prep Time:</h5></td>
+                        <td class="align-middle"></td>
+                        <td class="align-middle"><h5>Total Time:</h5></td>
+                        <td class="align-middle"></td>
+                    </tr>
+                    <tr class="text-center">
+                        <td class="align-middle"><h5>Oven Temp:</h5></td>
+                        <td class="align-middle"></td>
+                        <td class="align-middle"><h5>Servings:</h5></td>
+                        <td class="align-middle"></td>
+                    </tr>
+                </table>
+                <h4 class="text-center">Ingredients:</h4>
+                <table class="table table-striped">
+                    <tr class="text-center">
+                        <td class="align-middle"></td>
+                        <td class="align-middle"></td>
+                        <td class="align-middle"></td>
+                        <td class="align-middle"></td>
+                    </tr>
+                    <tr class="text-center">
+                        <td class="align-middle"></td>
+                        <td class="align-middle"></td>
+                        <td class="align-middle"></td>
+                        <td class="align-middle"></td>
+                    </tr>
+                    <tr class="text-center">
+                        <td class="align-middle"></td>
+                        <td class="align-middle"></td>
+                        <td class="align-middle"></td>
+                        <td class="align-middle"></td>
+                    </tr>
+                </table>
+                <h4 class="text-center">Directions:</h4>
+                <ul class="list-group text-center">
+                    <li class="list-group-item"></li> 
+                    <li class="list-group-item"></li>
+                    <li class="list-group-item"></li>
+                    <li class="list-group-item"></li>
+                    <li class="list-group-item"></li>
+                    <li class="list-group-item"></li>
+                    <li class="list-group-item"></li>
+                    <li class="list-group-item"></li>
+                    <li class="list-group-item"></li>
+                </ul>
+            </div>
+
+            <div id="description-sausage&peppers" class="description">
+                <h2 class="text-center">Sausage & Peppers</h2>
+                <table class="table table-striped">
+                    <tr class="text-center">
+                        <td class="align-middle"><h5>Prep Time:</h5></td>
+                        <td class="align-middle"></td>
+                        <td class="align-middle"><h5>Total Time:</h5></td>
+                        <td class="align-middle"></td>
+                    </tr>
+                    <tr class="text-center">
+                        <td class="align-middle"><h5>Oven Temp:</h5></td>
+                        <td class="align-middle"></td>
+                        <td class="align-middle"><h5>Servings:</h5></td>
+                        <td class="align-middle"></td>
+                    </tr>
+                </table>
+                <h4 class="text-center">Ingredients:</h4>
+                <table class="table table-striped">
+                    <tr class="text-center">
+                        <td class="align-middle"></td>
+                        <td class="align-middle"></td>
+                        <td class="align-middle"></td>
+                        <td class="align-middle"></td>
+                    </tr>
+                    <tr class="text-center">
+                        <td class="align-middle"></td>
+                        <td class="align-middle"></td>
+                        <td class="align-middle"></td>
+                        <td class="align-middle"></td>
+                    </tr>
+                    <tr class="text-center">
+                        <td class="align-middle"></td>
+                        <td class="align-middle"></td>
+                        <td class="align-middle"></td>
+                        <td class="align-middle"></td>
+                    </tr>
+                </table>
+                <h4 class="text-center">Directions:</h4>
+                <ul class="list-group text-center">
+                    <li class="list-group-item"></li> 
+                    <li class="list-group-item"></li>
+                    <li class="list-group-item"></li>
+                    <li class="list-group-item"></li>
+                    <li class="list-group-item"></li>
+                    <li class="list-group-item"></li>
+                    <li class="list-group-item"></li>
+                    <li class="list-group-item"></li>
+                    <li class="list-group-item"></li>
+                </ul>
+            </div>
+
+            <div id="description-jumbalaya" class="description">
+                <h2 class="text-center">Jumbalaya</h2>
+                <table class="table table-striped">
+                    <tr class="text-center">
+                        <td class="align-middle"><h5>Prep Time:</h5></td>
+                        <td class="align-middle"></td>
+                        <td class="align-middle"><h5>Total Time:</h5></td>
+                        <td class="align-middle"></td>
+                    </tr>
+                    <tr class="text-center">
+                        <td class="align-middle"><h5>Oven Temp:</h5></td>
+                        <td class="align-middle"></td>
+                        <td class="align-middle"><h5>Servings:</h5></td>
+                        <td class="align-middle"></td>
+                    </tr>
+                </table>
+                <h4 class="text-center">Ingredients:</h4>
+                <table class="table table-striped">
+                    <tr class="text-center">
+                        <td class="align-middle"></td>
+                        <td class="align-middle"></td>
+                        <td class="align-middle"></td>
+                        <td class="align-middle"></td>
+                    </tr>
+                    <tr class="text-center">
+                        <td class="align-middle"></td>
+                        <td class="align-middle"></td>
+                        <td class="align-middle"></td>
+                        <td class="align-middle"></td>
+                    </tr>
+                    <tr class="text-center">
+                        <td class="align-middle"></td>
+                        <td class="align-middle"></td>
+                        <td class="align-middle"></td>
+                        <td class="align-middle"></td>
+                    </tr>
+                </table>
+                <h4 class="text-center">Directions:</h4>
+                <ul class="list-group text-center">
+                    <li class="list-group-item"></li> 
+                    <li class="list-group-item"></li>
+                    <li class="list-group-item"></li>
+                    <li class="list-group-item"></li>
+                    <li class="list-group-item"></li>
+                    <li class="list-group-item"></li>
+                    <li class="list-group-item"></li>
+                    <li class="list-group-item"></li>
+                    <li class="list-group-item"></li>
+                </ul>
+            </div>
+
+            <div id="description-cavatelli" class="description">
+                <h2 class="text-center">Cavatelli</h2>
+                <table class="table table-striped">
+                    <tr class="text-center">
+                        <td class="align-middle"><h5>Prep Time:</h5></td>
+                        <td class="align-middle"></td>
+                        <td class="align-middle"><h5>Total Time:</h5></td>
+                        <td class="align-middle"></td>
+                    </tr>
+                    <tr class="text-center">
+                        <td class="align-middle"><h5>Oven Temp:</h5></td>
+                        <td class="align-middle"></td>
+                        <td class="align-middle"><h5>Servings:</h5></td>
+                        <td class="align-middle"></td>
+                    </tr>
+                </table>
+                <h4 class="text-center">Ingredients:</h4>
+                <table class="table table-striped">
+                    <tr class="text-center">
+                        <td class="align-middle"></td>
+                        <td class="align-middle"></td>
+                        <td class="align-middle"></td>
+                        <td class="align-middle"></td>
+                    </tr>
+                    <tr class="text-center">
+                        <td class="align-middle"></td>
+                        <td class="align-middle"></td>
+                        <td class="align-middle"></td>
+                        <td class="align-middle"></td>
+                    </tr>
+                    <tr class="text-center">
+                        <td class="align-middle"></td>
+                        <td class="align-middle"></td>
+                        <td class="align-middle"></td>
+                        <td class="align-middle"></td>
+                    </tr>
+                </table>
+                <h4 class="text-center">Directions:</h4>
+                <ul class="list-group text-center">
+                    <li class="list-group-item"></li> 
+                    <li class="list-group-item"></li>
+                    <li class="list-group-item"></li>
+                    <li class="list-group-item"></li>
+                    <li class="list-group-item"></li>
+                    <li class="list-group-item"></li>
+                    <li class="list-group-item"></li>
+                    <li class="list-group-item"></li>
+                    <li class="list-group-item"></li>
+                </ul>
+            </div>
+
+            <div id="description-meatballs" class="description">
+                <h2 class="text-center">Spaghetti & Meatballs</h2>
+                <table class="table table-striped">
+                    <tr class="text-center">
+                        <td class="align-middle"><h5>Prep Time:</h5></td>
+                        <td class="align-middle">5 Minutes</td>
+                        <td class="align-middle"><h5>Total Time:</h5></td>
+                        <td class="align-middle">25 Minutes</td>
+                    </tr>
+                    <tr class="text-center">
+                        <td class="align-middle"><h5>Oven Temp:</h5></td>
+                        <td class="align-middle">Stove Top</td>
+                        <td class="align-middle"><h5>Servings:</h5></td>
+                        <td class="align-middle">3-4</td>
+                    </tr>
+                </table>
+                <h4 class="text-center">Ingredients:</h4>
+                <table class="table table-striped">
+                    <tr class="text-center">
+                        <td class="align-middle">1 Box Spaghetti</td>
+                        <td class="align-middle">1 Lg Jar Ragu</td>
+                        <td class="align-middle">1 Box 52ct. Mamma Lucia Meatballs</td>
+                        <td class="align-middle">Olive Oil</td>
+                    </tr>
+                    <tr class="text-center">
+                        <td class="align-middle">2 cloves Garlic</td>
+                        <td class="align-middle">Italian Seasonig</td>
+                        <td class="align-middle">Garlic Powder</td>
+                        <td class="align-middle">1 Bag Mixed Cheese (optional)</td>
+                    </tr>
+                    <tr class="text-center">
+                        <td class="align-middle">1 Box New York Garlic Texas Toast (optional)</td>
+                    </tr>
+                </table>
+                <h4 class="text-center">Directions:</h4>
+                <ul class="list-group text-center">
+                    <li class="list-group-item">Start by filling a 4qt sauce pan 3/4 with cold water.</li> 
+                    <li class="list-group-item">Add 2 tsp. Salt and a tbsp olive oil to the water.</li>
+                    <li class="list-group-item">Bring water to a boil.</li>
+                    <li class="list-group-item">Steam or Microwave Meatballs.</li>
+                    <li class="list-group-item">Add in Spaghetti once boiling.</li>
+                    <li class="list-group-item">Mince garlic cloves.</li>
+                    <li class="list-group-item">Strain Pasta once cooked.</li>
+                    <li class="list-group-item">Add Meatballs and spaghetti to larger Pan/Wok when ready.</li>
+                    <li class="list-group-item">Add Ragu, garlic, optional cheese, and seasonings to taste.</li>
+                    <li class="list-group-item">Mix thoroughly over medium heat. Serve.</li>
+                </ul>
+            </div>
+
+            <!-- Drinks -->
+            <div id="description-passionfruitmargarita" class="description">
+                <h3>Passion Fruit Margarita</h3>
+                <p>This is the description for Passion Fruit Margarita.</p>
+            </div>
+
+        </div>
+    </div>
+</main>
+
+
+</html>
+

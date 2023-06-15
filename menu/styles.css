@@ -1,0 +1,15 @@
+.dropdown {
+    display: none;
+  }
+
+button {
+    cursor: pointer;
+}
+
+.description {
+    display: none;
+}
+
+.header {
+    display: none;
+}
